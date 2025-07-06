@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps, defineEmits } from "vue"
 type MenuItem = {
   label: string
   icon: [iconPrefix: string, iconName: string]
