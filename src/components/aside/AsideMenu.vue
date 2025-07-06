@@ -17,9 +17,9 @@ defineEmits(['close'])
     :class="isShow ? 'translate-x-0' : '-translate-x-52'">
     <div class="h-full overflow-y-auto p-4">
       <div class="text-right">
+        <!-- Close Icon -->
         <font-awesome-icon :icon="['fas', 'xmark']" @click="$emit('close')" class="cursor-pointer" />
       </div>
-
       <ul class="space-y-2">
         <li v-for="{ label, icon } in menuItems" :key="label"
           class="hover:bg-zinc-700 rounded px-2 py-1 cursor-pointer">

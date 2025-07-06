@@ -6,7 +6,7 @@ import BaseItemGrid from '@/components/base/BaseItemGrid.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import { useTheme } from '@/composables/useTheme'
 const { setTheme } = useTheme()
-const items = reactive(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'])
+const items = reactive(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'])
 const menuItem: { label: string; icon: [string, string] }[] = [
   { label: 'Home', icon: ['fas', 'house'] },
   { label: 'About', icon: ['fas', 'circle-exclamation'] },
@@ -34,7 +34,6 @@ function toggleMenu() {
         </div>
       </div>
     </template>
-
     <template #aside>
       <AsideMenu :menuItems="menuItem" :isShow="isShowMenu" @close="toggleMenu" />
     </template>
@@ -44,6 +43,5 @@ function toggleMenu() {
       </div>
       <BaseItemGrid :items="items" />
     </div>
-
   </DefaultLayout>
 </template>
